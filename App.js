@@ -53,7 +53,17 @@ let estilos = StyleSheet.create({
   imagenes:{
     width:200,
     height:200
-}
+  },
+  boton:{
+    backgroundColor: "blue",
+    borderRadius: 10,
+    paddingHorizontal: 20,
+    paddingVertical: 10
+  },
+  texto2:{
+    color: "white",
+    fontSize: 20
+  }
 })
 
 const styles = StyleSheet.create({
