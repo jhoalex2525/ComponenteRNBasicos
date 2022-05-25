@@ -17,6 +17,9 @@ import {
   Text,
   useColorScheme,
   View,
+  Button,
+  Alert,
+  TouchableOpacity
 } from 'react-native';
 
 
@@ -28,7 +31,14 @@ const App = () => {
         <Text style={estilos.texto}>Prueba2</Text>      
       </View>
       <View>
-        <Image source={{uri:"https://www.fillmurray.com/640/360"}}></Image>
+        <Image style={estilos.imagenes} source={{uri:"https://www.fillmurray.com/640/360"}}></Image>
+        <Image style={estilos.imagenes} source={require("./imagenes/foto1.jpg")}></Image>
+      </View>
+      <View>
+        <Button title='Click aqui' color='red' onPress={()=> Alert.alert("Le di click al boton")}></Button>
+        <TouchableOpacity onPress={()=> Alert.alert("Hola desde Alert")} >
+          <Text>Click aqui 2</Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
@@ -40,7 +50,10 @@ let estilos = StyleSheet.create({
     color: "blue",
     fontWeight: "bold"
   },
-  imagenes:{}
+  imagenes:{
+    width:200,
+    height:200
+}
 })
 
 const styles = StyleSheet.create({
